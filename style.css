@@ -1,0 +1,12 @@
+#gridContainer{
+    display: grid;
+    width: 600px;
+    height: 600px;
+    border: solid black 0.5px;
+}
+.grid_cell{
+    border: solid black 0.5px;
+}
+.grid_cell_on{
+    background-color: black;
+}
