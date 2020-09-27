@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+    <div id="main-content">
     <div id="cells_manager">
         <button type="button" id="cm_less">-</button>
         <input type="text" id="cm_display" placeholder="16">
@@ -22,7 +22,7 @@
         <button type="button" id="colors_selector">colors</button>
         <button type="button" id="erase">erase</button>
     </div>
-    
+    </div>
 </body>
 <script type="text/javascript">
 //setting DOMS elements as variables
@@ -111,7 +111,7 @@ function gridCreator(amountOfColums){
             gridContainer.appendChild(gridCell);
         }
     }
-    addEventListenerToCells()
+    addEventListenerToCells();
 }
 
 // created to create evente listeners after the grid is created or modified.
