@@ -1,3 +1,6 @@
+body{
+    background-color: red;
+}
 #gridContainer{
     display: grid;
     width: 600px;
@@ -6,7 +9,11 @@
 }
 .grid_cell{
     border: solid black 0.5px;
+    background-color: white;
 }
 .grid_cell_on{
     background-color: black;
+}
+.press_color_selector{
+    background-color: blueviolet;
 }
