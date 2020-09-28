@@ -9,18 +9,19 @@
 <body>
     <div id="main-content">
     <div id="cells_manager">
-        <button type="button" id="cm_less">-</button>
+        <button type="button" id="cm_less"class="displat_buttons">-</button>
         <input type="text" id="cm_display" placeholder="16">
-        <button type="button" id="cm_more">+</button>
+        <button type="button" id="cm_more"class="displat_buttons">+</button>
     </div>
     <!--grid container-->
     <div id="gridContainer"></div>
 
     <div id="color_selector">
-        <button type="button" id="black_selector" class="press_color_selector">black</button>
-        <button type="button" id="white_selector">white</button>
-        <button type="button" id="colors_selector">colors</button>
-        <button type="button" id="erase">erase</button>
+        <button type="button" id="black_selector" class="button press_color_selector">black</button>
+        <button type="button" id="white_selector" class="button">white</button>
+        <button type="button" id="colors_selector" class="button">colors</button>
+        <button type="button" id="erase" class="button">erase</button>
+        <button type="button" id="grid_option" class="button press_grid_selector">grid</button>
     </div>
     </div>
 </body>
@@ -34,6 +35,7 @@ const blackSelector = document.querySelector('#black_selector');
 const whiteSelector = document.querySelector('#white_selector');
 const colorsSelector = document.querySelector('#colors_selector');
 const eraseButton = document.querySelector('#erase');
+const gridOption = document.querySelector('#grid_option');
 
 //Array with color options
 const colorsOptions = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
@@ -132,6 +134,28 @@ function painter(){
 //choose a random number
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+//grid on off option
+let gridButtonIsOn = true;
+gridOption.addEventListener('click', test);
+function test(){
+    let gridCells = document.querySelectorAll(".grid_cell");
+    
+    if(gridButtonIsOn){
+        gridCells.forEach(element => {
+        element.style.setProperty('border', 'none');
+        });
+        gridOption.classList.remove('press_grid_selector');
+        gridButtonIsOn = false;
+    }
+    else{
+        gridCells.forEach(element => {
+        element.style.setProperty('border', 'solid black 0.5px');
+        });
+        gridOption.classList.add('press_grid_selector');
+        gridButtonIsOn = true;
+    }
+
 }
 </script>
 

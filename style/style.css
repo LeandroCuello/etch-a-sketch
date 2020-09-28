@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'pixelfont';
+    src:  url('./Pixel-Art.woff') format('woff');
+  }
 body{
     background-image: url(background.png);
+    font-family: 'pixelfont';
 }
 #main-content{
     background-color: #ff6347c2;
@@ -15,6 +20,32 @@ body{
     height: 600px;
     border: solid black 0.5px;
 }
+#cm_display{
+    background-color: #ff000000;
+    border: none;
+    text-align: center;
+    font-family: 'pixelfont';
+    font-size: 30px;
+    width: 50px;
+    height: 30px;
+}
+.displat_buttons{
+    border:solid black 10px;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+    font-family: 'pixelfont';
+    font-size: 25px;
+    font-weight: 700;
+}
+.button{
+    font-family: 'pixelfont';
+    font-size: medium;
+    border: solid 10px;
+    background-color: tomato;
+    width: 200px;
+    height: 50px;
+}
 .grid_cell{
     border: solid black 0.5px;
     background-color: white;
@@ -24,4 +55,7 @@ body{
 }
 .press_color_selector{
     background-color: blueviolet;
+}
+.press_grid_selector{
+    background-color: teal;
 }
